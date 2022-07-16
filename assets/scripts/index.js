@@ -1,5 +1,7 @@
 const renderData = function (dataToBeRendered) {
-  $("#mainContainer").empty();
+  $("#mainContainer").empty(); // empties the container before appending data
+
+  // for each result, create a div and append it to the container
   for (let index = 0; index < dataToBeRendered.results.length; index++) {
     const result = dataToBeRendered.results[index];
 
@@ -23,14 +25,16 @@ const getSearchData = function (searchTerm, noOfResults) {
       console.log(data);
       renderData(data);
     })
+    // if there's an error, log it to the console
     .catch(function (error) {
-      console.log(error);
+      console.error(error);
     });
 };
 
 const searchOnSubmit = function (event) {
   event.preventDefault();
 
+  // retrieves the values from the
   const searchInputValue = $("#searchInput").val();
   const resNumber = $("#searchInputCount").val();
 
