@@ -32,31 +32,41 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="#"
+                id="homeButton"
+                >Home</a
+              >
             </li>
           </ul>
-          <form class="d-flex" id="search-form">
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-              id="search-input"
-            />
-            <input
-              class="form-control me-2"
-              type="number"
-              placeholder="Count"
-              aria-label="Count"
-              id="search-input-count"
-            />
-            <button class="btn btn-outline-success" type="submit">
-              Search
-            </button>
-          </form>
         </div>
       </div>
     </nav>
+
+    <div
+      class="container-fluid d-flex justify-content-center align-items-center w-75 vh-100"
+      id="mainContainer"
+    >
+      <form class="d-flex" id="searchForm">
+        <input
+          class="form-control me-2"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+          id="searchInput"
+        />
+        <input
+          class="form-control me-2"
+          type="number"
+          placeholder="Count"
+          aria-label="Count"
+          id="searchInputCount"
+        />
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
 
     <script
       src="https://code.jquery.com/jquery-3.6.0.js"
